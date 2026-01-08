@@ -1,4 +1,5 @@
 
+<img width="1024" height="1024" alt="ChatGPT Image Jan 8, 2026, 10_25_24 AM" src="https://github.com/user-attachments/assets/d86a7cbd-bd39-45a6-94e5-68489f74f698" />
 
 BEFORE YOU BEGIN:
 
