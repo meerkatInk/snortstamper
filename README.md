@@ -1,21 +1,6 @@
 # Snortstamper Web UI - Setup Guide
 
-## File Structure
-
-Create this folder structure in your project:
-
-```
-snortstamper-web/
-├── venv/                      (created after first run)
-├── app.py
-├── snortstamper_core.py
-├── requirements.txt
-├── index.html
-├── startup.bat                (Windows - double-click to run)
-├── startup.sh                 (macOS/Linux - run with ./startup.sh)
-├── transcript.txt             (example, for testing)
-└── youtube_chapters.txt       (generated output)
-```
+Snortstamper uses a locally-installed AI model to generate timestamps for any length of youtube transcripts.
 
 ## Installation Steps
 
@@ -24,6 +9,16 @@ Ensure you have:
 - Python 3.8+
 - [Ollama installed](https://ollama.com/download)
 - Ollama running with Mistral model: `ollama pull mistral`
+
+- Get the transcript
+    - For the correct timestamp format, you need the VidIQ plugin.
+https://app.vidiq.com/
+
+- Go to any youtube video
+    - Go to the description -> transcript
+    - Now you will see the VidIQ plugin button to copy the transcript
+    - Press the dropdown button and copy the transcript with timestamps
+    - Paste the whole transcript into the transcript.txt file
 
 ### 2. Create and Activate Virtual Environment
 
