@@ -56,20 +56,6 @@ You should see `(venv)` at the start of your terminal line when activated.
 pip install -r requirements.txt
 ```
 
-### 3. Files to Add/Replace
-
-**Add these NEW files:**
-- `app.py` - Flask web server
-- `snortstamper_core.py` - Core logic (unchanged from original)
-- `requirements.txt` - Python dependencies
-- `index.html` - Web UI frontend
-
-**Keep (unchanged):**
-- `transcript.txt` - Your transcript file (for testing)
-
-**You can remove:**
-- The old `snortstamper.py` - functionality is split into `snortstamper_core.py` and `app.py`
-
 ## Running the Application
 
 ### 1. Activate Virtual Environment (do this first!)
