@@ -24,34 +24,12 @@ https://app.vidiq.com/
     - Press the dropdown button and copy the transcript with timestamps
     - Paste the whole transcript into the transcript.txt file
 
-### 2. Create and Activate Virtual Environment
-
-**On Windows (PowerShell/CMD):**
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-**On macOS/Linux:**
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-You should see `(venv)` at the start of your terminal line when activated.
-
-### 3. Install Python Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Running the Application
 
 ### Easiest Way: One-Click Startup (Recommended)
 
 **Windows:**
-1. Double-click `startup.bat`
+1. Double-click `Run Snortstamper.ink`
 2. Wait for browser to prompt
 3. Open `http://localhost:5000`
 
