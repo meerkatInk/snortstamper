@@ -6,13 +6,15 @@ Create this folder structure in your project:
 
 ```
 snortstamper-web/
-├── venv/                      (created after step 2)
+├── venv/                      (created after first run)
 ├── app.py
 ├── snortstamper_core.py
 ├── requirements.txt
 ├── index.html
-├── transcript.txt (example, for CLI testing)
-└── youtube_chapters.txt (generated output)
+├── startup.bat                (Windows - double-click to run)
+├── startup.sh                 (macOS/Linux - run with ./startup.sh)
+├── transcript.txt             (example, for testing)
+└── youtube_chapters.txt       (generated output)
 ```
 
 ## Installation Steps
@@ -22,17 +24,6 @@ Ensure you have:
 - Python 3.8+
 - [Ollama installed](https://ollama.com/download)
 - Ollama running with Mistral model: `ollama pull mistral`
-
-- Get the transcript
-    - For the correct timestamp format, you need the VidIQ plugin.
-https://app.vidiq.com/
-
-- Go to any youtube video
-    - Go to the description -> transcript
-    - Now you will see the VidIQ plugin button to copy the transcript
-    - Press the dropdown button and copy the transcript with timestamps
-    - Paste the whole transcript into the transcript.txt file
-
 
 ### 2. Create and Activate Virtual Environment
 
@@ -72,34 +63,55 @@ pip install -r requirements.txt
 
 ## Running the Application
 
-### 1. Activate Virtual Environment (do this first!)
+### Easiest Way: One-Click Startup (Recommended)
 
 **Windows:**
+1. Double-click `startup.bat`
+2. Wait for browser to prompt
+3. Open `http://localhost:5000`
+
+**macOS/Linux:**
+1. Open terminal in the project folder
+2. Run: `chmod +x startup.sh && ./startup.sh`
+3. Wait for Flask to start
+4. Open `http://localhost:5000`
+
+The startup script will:
+- Create virtual environment (if needed)
+- Activate it
+- Check for Ollama and Mistral model
+- Start Ollama server
+- Start Flask server
+- Open the UI
+
+---
+
+### Manual Setup (if you prefer)
+
+**Step 1: Activate Virtual Environment**
+
+Windows:
 ```bash
 venv\Scripts\activate
 ```
 
-**macOS/Linux:**
+macOS/Linux:
 ```bash
 source venv/bin/activate
 ```
 
-You should see `(venv)` in your terminal.
-
-### 2. Start Ollama (in one terminal)
+**Step 2: Start Ollama** (in one terminal)
 ```bash
 ollama serve
 ```
 
-### 3. Start Flask Server (in another terminal, with venv activated)
+**Step 3: Start Flask Server** (in another terminal)
 ```bash
 python app.py
 ```
 
-The server will run at `http://localhost:5000`
-
-### 4. Access the Web UI
-Open your browser to: **http://localhost:5000**
+**Step 4: Open in Browser**
+Go to: `http://localhost:5000`
 
 ## Usage
 
@@ -149,14 +161,6 @@ with open('chapters.json', 'w', encoding='utf-8') as f:
 
 **Long processing time**
 - This is normal! LLM processing takes time. Check the terminal for progress logs.
-
-## Changes from Original Script
-
-✓ **Business logic unchanged** - All chapter generation code is identical
-✓ **Modular structure** - Core logic separated from web server
-✓ **API endpoint** - Added Flask endpoint for web requests
-✓ **Frontend** - Added React UI with file upload and download
-✓ **CLI still works** - Can still use `ChapterGenerator` class directly
 
 ## API Endpoint
 
