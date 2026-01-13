@@ -1,3 +1,7 @@
+
+
+
+
 # Snortstamper Web UI - Setup Guide
 
 Snortstamper uses a locally-installed AI model to generate timestamps for any length of youtube transcripts.
