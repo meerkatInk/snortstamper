@@ -22,7 +22,7 @@ https://app.vidiq.com/
     - Go to the description -> transcript
     - Now you will see the VidIQ plugin button to copy the transcript
     - Press the dropdown button and copy the transcript with timestamps
-    - Paste the whole transcript into the transcript.txt file
+    - Paste the whole transcript into a transcript.txt file and save it
 
 ## Running the Application
 
