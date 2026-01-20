@@ -15,14 +15,8 @@ Ensure you have:
 - Ollama running with Mistral model: `ollama pull mistral`
 
 - Get the transcript
-    - For the correct timestamp format, you need the VidIQ plugin.
-https://app.vidiq.com/
 
-- Go to any youtube video
-    - Go to the description -> transcript
-    - Now you will see the VidIQ plugin button to copy the transcript
-    - Press the dropdown button and copy the transcript with timestamps
-    - Paste the whole transcript into a transcript.txt file and save it
+VidIQ broke/disabled the transcript+timestamp download using their addon, so the current workaround is to manually copypaste the transcript into a txt file. The transcript only needs to have the timecodes, format  doesn't matter.
 
 ## Running the Application
 
