@@ -68,7 +68,7 @@ python app.py
 ```
 
 **Step 4: Open in Browser**
-Go to: `http://localhost:5000`
+Go to: http://localhost:5000
 
 ## Usage
 
@@ -80,29 +80,6 @@ Go to: `http://localhost:5000`
 6. Click "Download Chapters" to save as `youtube_chapters.txt`
 
 ## Command-Line Usage (Still Supported)
-
-If you want to use the script from the command line without the web UI:
-
-```python
-from snortstamper_core import ChapterGenerator
-import json
-
-with open('transcript.txt', 'r', encoding='utf-8') as f:
-    transcript = f.read()
-
-generator = ChapterGenerator(model="mistral")
-chapters = generator.generate_chapters(transcript)
-formatted = generator.format_chapters(chapters)
-
-print(formatted)
-
-# Optionally save
-with open('youtube_chapters.txt', 'w', encoding='utf-8') as f:
-    f.write(formatted)
-
-with open('chapters.json', 'w', encoding='utf-8') as f:
-    json.dump(chapters, f, indent=2, ensure_ascii=False)
-```
 
 ## Troubleshooting
 
@@ -119,21 +96,3 @@ with open('chapters.json', 'w', encoding='utf-8') as f:
 **Long processing time**
 - This is normal! LLM processing takes time. Check the terminal for progress logs.
 
-## API Endpoint
-
-```
-POST /api/generate-timestamps
-
-Request:
-- Form data with file field named "transcript" (multipart/form-data)
-
-Response:
-{
-  "timestamps": "[0:00] Chapter Title\n[1:30] Another Chapter\n..."
-}
-
-Error Response:
-{
-  "error": "Error message"
-}
-```
